@@ -7,7 +7,7 @@
 import psutil
 import platform
 from datetime import datetime
-import win32com.client
+
 
 def norcap_instance(bytes, suffix="B"):
     
@@ -110,5 +110,4 @@ for interface_name, interface_addresses in if_addrs.items():
 net_io = psutil.net_io_counters()
 print(f"Total Bytes Sent: {norcap_instance(net_io.bytes_sent)}")
 print(f"Total Bytes Received: {norcap_instance(net_io.bytes_recv)}")
-speaker = win32com.client.Dispatch("SAPI.SpVoice")
-speaker.Speak("Petru's speaking. Action performed!")
+
